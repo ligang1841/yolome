@@ -1,0 +1,12 @@
+path: mn 
+train: train
+val: val
+test: test
+
+nc: 3
+# classes
+#names: ["lymph", "mc", "bc"]
+names:
+  0: lymph
+  1: mc
+  2: bc
