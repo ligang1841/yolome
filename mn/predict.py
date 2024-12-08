@@ -26,12 +26,12 @@ def predict_and_detect(chosen_model, img, classes=[], conf=0.5, rectangle_thickn
 
 if __name__ == "__main__":
     #model = YOLO("yolo11x.pt")
-    model = YOLO("runs/train/exp3/weights/last.pt")
+    model = YOLO("runs/train/exp7/weights/last.pt")
 
     # read the image
     image = cv2.imread("test-mc2.png")
-    result_img, _ = predict_and_detect(model, image, classes=[], conf=0.1)
+    result_img, _ = predict_and_detect(model, image, classes=[], conf=0.5)
 
-    cv2.imshow("Image", result_img)
-    #cv2.imwrite("/dev/shm/test.png", result_img)
-    cv2.waitKey(0)
+    cv2.imwrite("/dev/shm/test.png", result_img)
+    #cv2.imshow("Image", result_img)
+    #cv2.waitKey(0)
