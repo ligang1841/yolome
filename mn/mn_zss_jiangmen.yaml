@@ -1,12 +1,13 @@
-path: mn 
+path: mn_zss_jiangmen 
 train: train
 val: val
 test: test
 
-nc: 3
+nc: 4
 # classes
-#names: ["lymph", "mc", "bc"]
+#names: ["lymph", "mc", "bc","c"]
 names:
   0: lymph
   1: mc
   2: bc
+  3: c

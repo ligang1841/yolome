@@ -1,4 +1,6 @@
 **/runs
+**/weights
+
 *.png
 *.jpg
 *.tif
