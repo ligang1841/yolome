@@ -12,7 +12,8 @@ if __name__ == '__main__':
     # 是否加载预训练权重,科研不建议大家加载否则很难提升精度
     # model.load('yolov11n.pt') 
 
-    model.train(data=r"mn_zss_jiangmen.yaml",
+    yamlfile = r"../../yolo_datasets/mn_zss_jiangmen/dataset.yaml"
+    model.train(data=yamlfile,
                 # 如果任务是其它的
                 #   'ultralytics/cfg/default.yaml'找到这里
                 #   修改task 为下面的某个 detect, segment, classify, pose
