@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xml>
+  <baseinfo>
+    <pname>new-one</pname>
+    <pid>p0000</pid>
+    <hid>n12345</hid>
+    <bid></bid>
+    <dept>体检中心</dept>
+    <bar_code>num</bar_code>
+    <app_doctor></app_doctor>
+    <app_time></app_time>
+    <sampling_time></sampling_time>
+    <test_item>全血</test_item>
+    <age>40</age>
+    <sex>1</sex>
+  </baseinfo>
+  <aerial_view img="aerial.jpg"/>
+  <calc>
+    <images>37</images>
+    <lymph>219</lymph>
+    <mc_cell>16</mc_cell>
+    <mc>16</mc>
+    <bc>11</bc>
+    <mc_cell_rate>0</mc_cell_rate>
+    <mc_rate>0</mc_rate>
+    <bc_rate>0</bc_rate>
+  </calc>
+  <report>
+    <reportdate></reportdate>
+    <receiver></receiver>
+    <receiver_time>2024-12-09 22:24</receiver_time>
+    <inspector></inspector>
+    <reviewer></reviewer>
+    <reviewer_time></reviewer_time>
+  </report>
+</xml>

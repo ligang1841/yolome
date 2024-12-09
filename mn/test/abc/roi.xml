@@ -1,0 +1,504 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<patient name="new_one">
+  <img name="7b95a357e3e943c72c96a00fdaef0659" number="abc" coor="0,0" mn="0">
+    <roi x="818" y="696" w="131" h="100" types="lymph"/>
+    <roi x="837" y="281" w="145" h="142" types="lymph"/>
+    <roi x="922" y="549" w="103" h="123" types="lymph"/>
+    <roi x="833" y="512" w="100" h="87" types="lymph"/>
+    <roi x="764" y="544" w="90" h="93" types="lymph"/>
+    <roi x="783" y="621" w="89" h="63" types="lymph"/>
+  </img>
+  <img name="8a755e220077b1ac2d7e6c59e95ddbec" number="abc" coor="0,0" mn="0">
+    <roi x="106" y="352" w="126" h="125" types="lymph"/>
+    <roi x="854" y="223" w="128" h="125" types="lymph"/>
+    <roi x="338" y="143" w="108" h="109" types="lymph"/>
+    <roi x="1180" y="498" w="97" h="106" types="lymph"/>
+    <roi x="1117" y="602" w="138" h="100" types="lymph"/>
+    <roi x="1000" y="394" w="66" h="65" types="bc"/>
+  </img>
+  <img name="493ab87f5477235fcc4eaba4c4c68522" number="abc" coor="0,0" mn="0">
+    <roi x="1158" y="864" w="98" h="91" types="lymph"/>
+    <roi x="1313" y="208" w="46" h="82" types="lymph"/>
+    <roi x="1071" y="922" w="96" h="77" types="lymph"/>
+  </img>
+  <img name="99863aafab0094643d9d0b663cc191a6" number="abc" coor="0,0" mn="0">
+    <roi x="1200" y="181" w="87" h="87" types="lymph"/>
+    <roi x="1032" y="271" w="101" h="102" types="lymph"/>
+    <roi x="525" y="481" w="97" h="87" types="lymph"/>
+    <roi x="0" y="601" w="114" h="130" types="lymph"/>
+    <roi x="1310" y="155" w="50" h="110" types="lymph"/>
+    <roi x="1318" y="844" w="42" h="107" types="lymph"/>
+    <roi x="482" y="422" w="93" h="104" types="lymph"/>
+  </img>
+  <img name="4a0409f624f7011ce42e0d80f64c7e07" number="abc" coor="0,0" mn="0">
+    <roi x="591" y="294" w="159" h="160" types="lymph"/>
+    <roi x="292" y="582" w="82" h="83" types="lymph"/>
+    <roi x="1207" y="845" w="97" h="95" types="lymph"/>
+  </img>
+  <img name="5098901e242674fa2292c9ada5634c68" number="abc" coor="0,0" mn="0">
+    <roi x="1046" y="589" w="115" h="114" types="lymph"/>
+    <roi x="969" y="698" w="96" h="100" types="lymph"/>
+    <roi x="652" y="212" w="91" h="96" types="lymph"/>
+    <roi x="840" y="281" w="73" h="87" types="lymph"/>
+    <roi x="653" y="212" w="89" h="96" types="mc" mn="1"/>
+    <roi x="1173" y="762" w="89" h="114" types="lymph"/>
+    <roi x="731" y="311" w="111" h="94" types="lymph"/>
+    <roi x="732" y="186" w="76" h="70" types="lymph"/>
+    <roi x="194" y="509" w="104" h="106" types="lymph"/>
+    <roi x="1252" y="764" w="93" h="98" types="lymph"/>
+  </img>
+  <img name="23131ffaafcd620d44252c9f6a782848" number="abc" coor="0,0" mn="0">
+    <roi x="212" y="103" w="109" h="110" types="lymph"/>
+    <roi x="225" y="809" w="122" h="102" types="lymph"/>
+    <roi x="1221" y="579" w="128" h="126" types="lymph"/>
+    <roi x="937" y="953" w="78" h="71" types="lymph"/>
+  </img>
+  <img name="7ed32909362844b3a2010a329b5d6a31" number="abc" coor="0,0" mn="0">
+    <roi x="64" y="469" w="125" h="123" types="lymph"/>
+  </img>
+  <img name="1c03ab393774a0914932697cb12799dc" number="abc" coor="0,0" mn="0">
+    <roi x="808" y="367" w="115" h="117" types="lymph"/>
+    <roi x="375" y="866" w="102" h="104" types="lymph"/>
+    <roi x="138" y="808" w="87" h="77" types="lymph"/>
+    <roi x="408" y="678" w="106" h="123" types="lymph"/>
+    <roi x="722" y="510" w="104" h="104" types="lymph"/>
+    <roi x="183" y="881" w="80" h="92" types="lymph"/>
+    <roi x="563" y="600" w="98" h="82" types="lymph"/>
+    <roi x="887" y="759" w="102" h="101" types="lymph"/>
+    <roi x="509" y="704" w="99" h="94" types="lymph"/>
+  </img>
+  <img name="29caae5729604d3af248f753c77e2116" number="abc" coor="0,0" mn="0">
+    <roi x="680" y="875" w="79" h="77" types="lymph"/>
+    <roi x="425" y="807" w="113" h="113" types="lymph"/>
+    <roi x="963" y="681" w="120" h="120" types="lymph"/>
+    <roi x="961" y="682" w="122" h="120" types="mc" mn="1"/>
+    <roi x="0" y="904" w="73" h="93" types="lymph"/>
+  </img>
+  <img name="3e8361a10e3368dbe2083d6d8275dcea" number="abc" coor="0,0" mn="0">
+    <roi x="147" y="160" w="113" h="112" types="lymph"/>
+    <roi x="594" y="620" w="108" h="108" types="lymph"/>
+    <roi x="105" y="667" w="109" h="106" types="lymph"/>
+    <roi x="0" y="6" w="82" h="120" types="lymph"/>
+    <roi x="855" y="190" w="96" h="97" types="lymph"/>
+    <roi x="373" y="268" w="93" h="85" types="lymph"/>
+    <roi x="411" y="192" w="90" h="87" types="mc" mn="1"/>
+    <roi x="1246" y="565" w="111" h="117" types="lymph"/>
+    <roi x="1084" y="669" w="106" h="85" types="lymph"/>
+    <roi x="818" y="640" w="87" h="88" types="lymph"/>
+    <roi x="238" y="77" w="88" h="90" types="lymph"/>
+  </img>
+  <img name="1a12a8ead6b17bb573a86fd3999f7b06" number="abc" coor="0,0" mn="0">
+    <roi x="590" y="879" w="104" h="108" types="lymph"/>
+    <roi x="292" y="273" w="145" h="143" types="lymph"/>
+    <roi x="1069" y="761" w="89" h="107" types="lymph"/>
+    <roi x="1226" y="760" w="97" h="110" types="lymph"/>
+    <roi x="432" y="873" w="99" h="109" types="lymph"/>
+    <roi x="1138" y="726" w="105" h="113" types="lymph"/>
+    <roi x="437" y="779" w="138" h="106" types="mc" mn="1"/>
+  </img>
+  <img name="2245ae66a5fb4f5b2ab6bbe78176ea78" number="abc" coor="0,0" mn="0">
+    <roi x="912" y="893" w="115" h="118" types="lymph"/>
+    <roi x="886" y="384" w="120" h="125" types="mc" mn="1"/>
+    <roi x="16" y="674" w="45" h="46" types="bc"/>
+    <roi x="0" y="707" w="82" h="104" types="lymph"/>
+    <roi x="885" y="383" w="121" h="126" types="lymph"/>
+  </img>
+  <img name="50eb14347d378d993d0a0125f91a8e91" number="abc" coor="0,0" mn="0">
+    <roi x="307" y="895" w="99" h="96" types="lymph"/>
+    <roi x="281" y="311" w="84" h="84" types="lymph"/>
+    <roi x="778" y="509" w="118" h="107" types="lymph"/>
+    <roi x="1262" y="566" w="98" h="138" types="lymph"/>
+    <roi x="662" y="690" w="116" h="107" types="lymph"/>
+    <roi x="1299" y="816" w="60" h="104" types="lymph"/>
+    <roi x="675" y="0" w="94" h="66" types="lymph"/>
+  </img>
+  <img name="586cbf9ba2f31beabf9c81cb6b10817f" number="abc" coor="0,0" mn="0">
+    <roi x="120" y="213" w="86" h="83" types="lymph"/>
+    <roi x="718" y="503" w="101" h="88" types="lymph"/>
+    <roi x="1038" y="204" w="123" h="121" types="lymph"/>
+  </img>
+  <img name="1b301eabac8c0b25809d8c66cd6297eb" number="abc" coor="0,0" mn="0">
+    <roi x="260" y="454" w="84" h="84" types="lymph"/>
+    <roi x="0" y="377" w="81" h="129" types="lymph"/>
+    <roi x="229" y="166" w="65" h="64" types="bc"/>
+  </img>
+  <img name="80bd92c4ab32d6dd1f129dc6db8fdbc4" number="abc" coor="0,0" mn="0">
+    <roi x="33" y="644" w="117" h="116" types="lymph"/>
+    <roi x="1267" y="16" w="92" h="124" types="lymph"/>
+    <roi x="1" y="512" w="107" h="118" types="lymph"/>
+    <roi x="3" y="926" w="144" h="98" types="lymph"/>
+    <roi x="866" y="767" w="50" h="49" types="bc"/>
+    <roi x="1115" y="580" w="117" h="99" types="lymph"/>
+    <roi x="1013" y="149" w="65" h="64" types="bc"/>
+    <roi x="647" y="62" w="124" h="123" types="lymph"/>
+    <roi x="1041" y="505" w="97" h="97" types="lymph"/>
+  </img>
+  <img name="2a5d49cc0158482eaeaa8cc71a0fb7cb" number="abc" coor="0,0" mn="0">
+    <roi x="513" y="161" w="107" h="98" types="lymph"/>
+    <roi x="238" y="269" w="91" h="92" types="lymph"/>
+    <roi x="1243" y="80" w="109" h="108" types="lymph"/>
+    <roi x="810" y="346" w="73" h="73" types="lymph"/>
+    <roi x="532" y="0" w="111" h="87" types="lymph"/>
+  </img>
+  <img name="0674a3e196cab87cb07a0c030e3c71da" number="abc" coor="0,0" mn="0">
+    <roi x="1115" y="588" w="127" h="125" types="lymph"/>
+    <roi x="902" y="891" w="134" h="130" types="lymph"/>
+  </img>
+  <img name="4a5484796f90468161d1c2ce16bc1cfd" number="abc" coor="0,0" mn="0">
+    <roi x="761" y="194" w="121" h="110" types="lymph"/>
+    <roi x="797" y="298" w="91" h="86" types="lymph"/>
+    <roi x="247" y="300" w="122" h="121" types="lymph"/>
+    <roi x="102" y="532" w="120" h="120" types="lymph"/>
+    <roi x="731" y="283" w="71" h="82" types="lymph"/>
+    <roi x="477" y="371" w="134" h="162" types="lymph"/>
+    <roi x="645" y="500" w="102" h="112" types="lymph"/>
+  </img>
+  <img name="8743af49efc69bbca1f1b00c7f049e39" number="abc" coor="0,0" mn="0">
+    <roi x="394" y="884" w="87" h="84" types="lymph"/>
+    <roi x="100" y="383" w="99" h="100" types="lymph"/>
+    <roi x="1169" y="203" w="93" h="87" types="lymph"/>
+    <roi x="174" y="420" w="98" h="99" types="lymph"/>
+    <roi x="1209" y="849" w="81" h="81" types="lymph"/>
+    <roi x="419" y="43" w="97" h="98" types="lymph"/>
+    <roi x="558" y="191" w="82" h="94" types="lymph"/>
+    <roi x="1113" y="268" w="116" h="104" types="lymph"/>
+    <roi x="169" y="0" w="99" h="91" types="lymph"/>
+    <roi x="611" y="211" w="96" h="101" types="lymph"/>
+    <roi x="1120" y="752" w="119" h="119" types="lymph"/>
+    <roi x="174" y="853" w="101" h="90" types="lymph"/>
+    <roi x="1242" y="246" w="81" h="97" types="lymph"/>
+    <roi x="1125" y="388" w="107" h="111" types="lymph"/>
+    <roi x="0" y="47" w="69" h="111" types="lymph"/>
+    <roi x="224" y="99" w="78" h="76" types="lymph"/>
+    <roi x="303" y="79" w="80" h="80" types="lymph"/>
+    <roi x="1320" y="246" w="40" h="94" types="lymph"/>
+  </img>
+  <img name="39c1920e39f1383393bd7a2bcccf3295" number="abc" coor="0,0" mn="0">
+    <roi x="1148" y="379" w="125" h="123" types="lymph"/>
+  </img>
+  <img name="9b09600c873dee5573f5daf5dbe403d1" number="abc" coor="0,0" mn="0">
+    <roi x="1050" y="137" w="107" h="97" types="lymph"/>
+    <roi x="1187" y="734" w="103" h="94" types="lymph"/>
+    <roi x="369" y="250" w="102" h="103" types="lymph"/>
+    <roi x="18" y="848" w="96" h="94" types="lymph"/>
+    <roi x="75" y="901" w="96" h="90" types="lymph"/>
+  </img>
+  <img name="9f8bd3bcf9bfdb6abd78741f16692c39" number="abc" coor="0,0" mn="0">
+    <roi x="1201" y="377" w="120" h="117" types="mc" mn="1"/>
+    <roi x="12" y="445" w="104" h="105" types="lymph"/>
+    <roi x="138" y="535" w="134" h="132" types="lymph"/>
+    <roi x="721" y="534" w="95" h="100" types="lymph"/>
+    <roi x="264" y="843" w="102" h="101" types="lymph"/>
+    <roi x="946" y="614" w="93" h="96" types="lymph"/>
+    <roi x="679" y="595" w="82" h="82" types="lymph"/>
+    <roi x="753" y="627" w="85" h="81" types="lymph"/>
+    <roi x="931" y="911" w="95" h="77" types="lymph"/>
+    <roi x="687" y="677" w="91" h="83" types="lymph"/>
+    <roi x="792" y="517" w="87" h="111" types="lymph"/>
+    <roi x="643" y="81" w="109" h="106" types="lymph"/>
+    <roi x="845" y="441" w="81" h="81" types="lymph"/>
+    <roi x="634" y="762" w="94" h="101" types="mc" mn="1"/>
+    <roi x="1253" y="457" w="19" h="17" types="c"/>
+    <roi x="981" y="209" w="143" h="133" types="mc" mn="1"/>
+  </img>
+  <img name="6f43fde5c9793c0a0e61be7314bdaaff" number="abc" coor="0,0" mn="0">
+    <roi x="176" y="97" w="98" h="100" types="lymph"/>
+    <roi x="197" y="189" w="111" h="83" types="lymph"/>
+    <roi x="1088" y="45" w="133" h="132" types="lymph"/>
+    <roi x="270" y="96" w="91" h="123" types="lymph"/>
+    <roi x="235" y="258" w="120" h="105" types="lymph"/>
+  </img>
+  <img name="949768f535f6d3e845df67aa73f1db00" number="abc" coor="0,0" mn="0">
+    <roi x="252" y="89" w="101" h="85" types="mc" mn="1"/>
+    <roi x="770" y="144" w="98" h="100" types="lymph"/>
+    <roi x="308" y="138" w="20" h="21" types="c"/>
+  </img>
+  <img name="053636eeacc419a41d9f546d083c81c4" number="abc" coor="0,0" mn="0">
+    <roi x="1129" y="77" w="115" h="115" types="lymph"/>
+    <roi x="1010" y="81" w="109" h="110" types="lymph"/>
+    <roi x="555" y="592" w="89" h="85" types="lymph"/>
+    <roi x="719" y="649" w="111" h="105" types="lymph"/>
+    <roi x="616" y="536" w="82" h="114" types="lymph"/>
+  </img>
+  <img name="4f2cc81b84b1b7b9c68e504d9c42415a" number="abc" coor="0,0" mn="0">
+    <roi x="747" y="50" w="107" h="118" types="lymph"/>
+    <roi x="815" y="137" w="102" h="79" types="lymph"/>
+    <roi x="813" y="387" w="122" h="117" types="lymph"/>
+    <roi x="494" y="428" w="95" h="92" types="lymph"/>
+    <roi x="863" y="604" w="89" h="100" types="lymph"/>
+    <roi x="335" y="657" w="100" h="89" types="lymph"/>
+  </img>
+  <img name="376a40a8782ae50d2b5ebd0d3492d905" number="abc" coor="0,0" mn="0">
+    <roi x="51" y="736" w="95" h="96" types="lymph"/>
+    <roi x="1135" y="536" w="124" h="110" types="lymph"/>
+    <roi x="488" y="160" w="130" h="130" types="lymph"/>
+    <roi x="1209" y="904" w="97" h="113" types="lymph"/>
+    <roi x="1146" y="633" w="137" h="93" types="lymph"/>
+    <roi x="255" y="717" w="108" h="109" types="lymph"/>
+    <roi x="1234" y="823" w="122" h="99" types="lymph"/>
+  </img>
+  <img name="50bdbaf0278a9fdce4bb70d31344384a" number="abc" coor="0,0" mn="0">
+    <roi x="578" y="553" w="104" h="120" types="lymph"/>
+    <roi x="601" y="657" w="107" h="114" types="lymph"/>
+    <roi x="48" y="700" w="128" h="127" types="lymph"/>
+    <roi x="742" y="835" w="102" h="122" types="lymph"/>
+    <roi x="833" y="816" w="121" h="152" types="lymph"/>
+    <roi x="331" y="921" w="134" h="99" types="lymph"/>
+    <roi x="1284" y="454" w="75" h="107" types="lymph"/>
+    <roi x="367" y="842" w="116" h="92" types="lymph"/>
+    <roi x="577" y="554" w="105" h="119" types="mc" mn="1"/>
+    <roi x="699" y="593" w="149" h="174" types="lymph"/>
+  </img>
+  <img name="46565c6e20eae9a4c58fa263e09e9de4" number="abc" coor="0,0" mn="0">
+    <roi x="786" y="823" w="84" h="97" types="lymph"/>
+    <roi x="698" y="617" w="125" h="118" types="lymph"/>
+    <roi x="641" y="677" w="105" h="105" types="lymph"/>
+    <roi x="496" y="687" w="117" h="113" types="lymph"/>
+    <roi x="902" y="883" w="98" h="87" types="lymph"/>
+    <roi x="865" y="827" w="67" h="89" types="lymph"/>
+    <roi x="856" y="385" w="50" h="51" types="bc"/>
+    <roi x="679" y="823" w="113" h="91" types="lymph"/>
+    <roi x="828" y="733" w="90" h="100" types="lymph"/>
+  </img>
+  <img name="5644be42ea10a5c4d03738c92f8343ef" number="abc" coor="0,0" mn="0">
+    <roi x="640" y="454" w="82" h="93" types="lymph"/>
+    <roi x="721" y="379" w="95" h="75" types="lymph"/>
+    <roi x="705" y="32" w="95" h="93" types="lymph"/>
+    <roi x="738" y="524" w="87" h="85" types="lymph"/>
+    <roi x="754" y="311" w="99" h="87" types="lymph"/>
+  </img>
+  <img name="9f7eec6b670bacbf9a3f07c74f6b42ae" number="abc" coor="0,0" mn="0">
+    <roi x="612" y="664" w="103" h="104" types="lymph"/>
+    <roi x="539" y="478" w="116" h="114" types="lymph"/>
+    <roi x="541" y="347" w="121" h="112" types="lymph"/>
+  </img>
+  <img name="53c8712815e9d273dcb0d29bb79bb52f" number="abc" coor="0,0" mn="0">
+    <roi x="980" y="495" w="111" h="111" types="lymph"/>
+    <roi x="414" y="476" w="103" h="103" types="lymph"/>
+    <roi x="1238" y="751" w="104" h="122" types="lymph"/>
+    <roi x="273" y="831" w="47" h="46" types="bc"/>
+    <roi x="1314" y="777" w="45" h="125" types="lymph"/>
+  </img>
+  <img name="6bd381fedee978da307f8fa4d9f60e35" number="abc" coor="0,0" mn="0">
+    <roi x="928" y="0" w="150" h="146" types="lymph"/>
+    <roi x="624" y="436" w="110" h="111" types="lymph"/>
+    <roi x="1191" y="49" w="142" h="138" types="lymph"/>
+    <roi x="1035" y="622" w="102" h="114" types="lymph"/>
+    <roi x="0" y="227" w="63" h="107" types="lymph"/>
+    <roi x="1117" y="603" w="92" h="95" types="lymph"/>
+  </img>
+  <img name="90b342174f8965efd12da017a56f6812" number="abc" coor="0,0" mn="0">
+    <roi x="1106" y="401" w="99" h="93" types="lymph"/>
+    <roi x="894" y="766" w="112" h="111" types="mc" mn="1"/>
+    <roi x="190" y="257" w="57" h="57" types="bc"/>
+  </img>
+  <img name="2378ea65676037fad7c1d4dd547936fb" number="abc" coor="0,0" mn="0">
+    <roi x="631" y="676" w="129" h="123" types="lymph"/>
+    <roi x="674" y="618" w="128" h="120" types="lymph"/>
+  </img>
+  <img name="2109a861a045c71c7c151fb44553147a" number="abc" coor="0,0" mn="0">
+    <roi x="455" y="707" w="97" h="98" types="lymph"/>
+    <roi x="152" y="109" w="96" h="93" types="lymph"/>
+    <roi x="991" y="408" w="80" h="80" types="lymph"/>
+    <roi x="601" y="709" w="108" h="109" types="lymph"/>
+    <roi x="970" y="73" w="128" h="144" types="lymph"/>
+  </img>
+  <img name="0702fcd05f3a4a0cba724a0992352733" number="abc" coor="0,0" mn="0">
+    <roi x="212" y="38" w="113" h="103" types="lymph"/>
+    <roi x="125" y="798" w="105" h="105" types="lymph"/>
+    <roi x="163" y="98" w="81" h="81" types="lymph"/>
+  </img>
+  <img name="3fa8b1e93b19828a4e3d65e12cb8eb9f" number="abc" coor="0,0" mn="0">
+    <roi x="1185" y="474" w="115" h="117" types="lymph"/>
+    <roi x="728" y="728" w="124" h="123" types="lymph"/>
+    <roi x="1082" y="254" w="104" h="96" types="lymph"/>
+    <roi x="1236" y="888" w="108" h="110" types="lymph"/>
+    <roi x="586" y="819" w="116" h="108" types="lymph"/>
+  </img>
+  <img name="9e746724361377ccfa9a5c5696e1a32f" number="abc" coor="0,0" mn="0">
+    <roi x="3" y="335" w="123" h="136" types="lymph"/>
+    <roi x="68" y="303" w="123" h="129" types="lymph"/>
+    <roi x="1019" y="844" w="120" h="124" types="lymph"/>
+    <roi x="1153" y="835" w="86" h="85" types="mc" mn="1"/>
+  </img>
+  <img name="758edd5848f2ddcea4c165cd49316afd" number="abc" coor="0,0" mn="0">
+    <roi x="903" y="13" w="100" h="94" types="lymph"/>
+    <roi x="703" y="117" w="113" h="102" types="lymph"/>
+    <roi x="673" y="206" w="102" h="96" types="lymph"/>
+    <roi x="1006" y="28" w="73" h="74" types="lymph"/>
+    <roi x="782" y="195" w="133" h="119" types="lymph"/>
+    <roi x="783" y="195" w="128" h="118" types="mc" mn="1"/>
+    <roi x="6" y="654" w="89" h="96" types="mc" mn="1"/>
+  </img>
+  <img name="32d6f913546aa77f6973c138fa508ec3" number="abc" coor="0,0" mn="0">
+    <roi x="1041" y="408" w="116" h="117" types="lymph"/>
+    <roi x="828" y="659" w="100" h="100" types="lymph"/>
+    <roi x="126" y="691" w="112" h="113" types="lymph"/>
+    <roi x="952" y="767" w="56" h="56" types="bc"/>
+    <roi x="1206" y="108" w="88" h="63" types="lymph"/>
+  </img>
+  <img name="7169f23cb0a06cf8c9ddabddb3c2e276" number="abc" coor="0,0" mn="0">
+    <roi x="474" y="8" w="112" h="112" types="lymph"/>
+    <roi x="49" y="301" w="130" h="138" types="lymph"/>
+    <roi x="758" y="873" w="111" h="108" types="lymph"/>
+  </img>
+  <img name="3cef9b68c6141d4529ee46f9d8c1de96" number="abc" coor="0,0" mn="0">
+    <roi x="143" y="466" w="96" h="92" types="lymph"/>
+  </img>
+  <img name="6e5ea3369d18ab7f667cf122059fcfb4" number="abc" coor="0,0" mn="0">
+    <roi x="955" y="373" w="128" h="129" types="lymph"/>
+    <roi x="1018" y="16" w="127" h="121" types="lymph"/>
+    <roi x="84" y="688" w="113" h="111" types="lymph"/>
+    <roi x="157" y="372" w="129" h="130" types="lymph"/>
+    <roi x="1044" y="685" w="129" h="109" types="lymph"/>
+    <roi x="926" y="904" w="86" h="120" types="mc" mn="1"/>
+    <roi x="1122" y="83" w="106" h="109" types="lymph"/>
+    <roi x="348" y="352" w="51" h="50" types="bc"/>
+    <roi x="1033" y="575" w="141" h="121" types="lymph"/>
+  </img>
+  <img name="6d0489cf673cd1c9e3764d140ce55112" number="abc" coor="0,0" mn="0">
+    <roi x="878" y="357" w="122" h="121" types="lymph"/>
+    <roi x="804" y="151" w="117" h="118" types="lymph"/>
+    <roi x="90" y="775" w="98" h="101" types="mc" mn="1"/>
+    <roi x="730" y="108" w="117" h="118" types="lymph"/>
+    <roi x="918" y="753" w="68" h="66" types="bc"/>
+    <roi x="0" y="636" w="87" h="116" types="lymph"/>
+    <roi x="148" y="817" w="95" h="101" types="lymph"/>
+    <roi x="751" y="232" w="47" h="51" types="bc"/>
+  </img>
+  <img name="9dae216018869ac3fb501cf09293929a" number="abc" coor="0,0" mn="0">
+    <roi x="163" y="654" w="115" h="114" types="lymph"/>
+    <roi x="958" y="849" w="112" h="113" types="lymph"/>
+    <roi x="201" y="308" w="107" h="101" types="lymph"/>
+    <roi x="0" y="277" w="95" h="136" types="lymph"/>
+    <roi x="39" y="969" w="99" h="55" types="lymph"/>
+  </img>
+  <img name="2eecf9d5ab90cfe68461341114529887" number="abc" coor="0,0" mn="0">
+    <roi x="354" y="788" w="98" h="101" types="lymph"/>
+    <roi x="330" y="710" w="82" h="94" types="lymph"/>
+    <roi x="526" y="420" w="145" h="115" types="lymph"/>
+    <roi x="258" y="686" w="83" h="89" types="lymph"/>
+    <roi x="687" y="672" w="124" h="131" types="lymph"/>
+    <roi x="804" y="673" w="127" h="157" types="lymph"/>
+    <roi x="1283" y="326" w="77" h="144" types="lymph"/>
+    <roi x="687" y="671" w="125" h="133" types="mc" mn="1"/>
+    <roi x="781" y="303" w="115" h="102" types="mc" mn="1"/>
+  </img>
+  <img name="97efd73d8d0eb82c8d0e2d4cab3f1a2d" number="abc" coor="0,0" mn="0">
+    <roi x="0" y="516" w="114" h="121" types="lymph"/>
+    <roi x="727" y="367" w="72" h="89" types="lymph"/>
+    <roi x="1149" y="942" w="95" h="82" types="lymph"/>
+    <roi x="609" y="581" w="84" h="85" types="bc"/>
+  </img>
+  <img name="4912e68d9ff15944773a534181c97e35" number="abc" coor="0,0" mn="0">
+    <roi x="318" y="750" w="100" h="92" types="lymph"/>
+    <roi x="766" y="772" w="123" h="122" types="lymph"/>
+    <roi x="627" y="204" w="125" h="147" types="lymph"/>
+    <roi x="1035" y="479" w="103" h="104" types="lymph"/>
+    <roi x="322" y="628" w="102" h="102" types="mc" mn="1"/>
+    <roi x="1000" y="546" w="102" h="95" types="lymph"/>
+    <roi x="549" y="189" w="96" h="109" types="lymph"/>
+    <roi x="370" y="697" w="17" h="15" types="c"/>
+  </img>
+  <img name="9078df1c9d5d72364bde2e395f826c1f" number="abc" coor="0,0" mn="0">
+    <roi x="460" y="747" w="94" h="93" types="lymph"/>
+    <roi x="1279" y="153" w="81" h="96" types="lymph"/>
+  </img>
+  <img name="465597153cebe5afafe4164ba4640c1b" number="abc" coor="0,0" mn="0">
+    <roi x="778" y="713" w="140" h="139" types="lymph"/>
+    <roi x="974" y="787" w="145" h="147" types="lymph"/>
+  </img>
+  <img name="6740da2f4d980d2af0c577e072559dd8" number="abc" coor="0,0" mn="0">
+    <roi x="204" y="628" w="103" h="104" types="lymph"/>
+    <roi x="40" y="857" w="113" h="114" types="lymph"/>
+    <roi x="981" y="17" w="110" h="110" types="lymph"/>
+    <roi x="14" y="132" w="84" h="87" types="lymph"/>
+    <roi x="377" y="125" w="96" h="104" types="lymph"/>
+    <roi x="327" y="632" w="102" h="115" types="lymph"/>
+    <roi x="301" y="144" w="82" h="97" types="lymph"/>
+    <roi x="292" y="703" w="40" h="41" types="bc"/>
+  </img>
+  <img name="8e1b9f42ded87f88bd49c53c27d4b9c6" number="abc" coor="0,0" mn="0">
+    <roi x="733" y="115" w="113" h="113" types="lymph"/>
+    <roi x="1229" y="185" w="103" h="103" types="lymph"/>
+  </img>
+  <img name="7f1069ec91f4eb22dd22b9ec887ef230" number="abc" coor="0,0" mn="0">
+    <roi x="627" y="595" w="82" h="84" types="lymph"/>
+    <roi x="893" y="917" w="99" h="98" types="lymph"/>
+    <roi x="1156" y="231" w="100" h="100" types="lymph"/>
+    <roi x="1087" y="129" w="94" h="91" types="lymph"/>
+    <roi x="684" y="871" w="102" h="87" types="lymph"/>
+    <roi x="0" y="317" w="76" h="108" types="lymph"/>
+    <roi x="1005" y="44" w="102" h="100" types="lymph"/>
+    <roi x="617" y="670" w="136" h="116" types="lymph"/>
+    <roi x="245" y="0" w="114" h="87" types="lymph"/>
+    <roi x="1246" y="33" w="85" h="87" types="lymph"/>
+    <roi x="761" y="593" w="53" h="53" types="bc"/>
+  </img>
+  <img name="42bdab9b006872e267c0701a2ff320b7" number="abc" coor="0,0" mn="0">
+    <roi x="907" y="320" w="107" h="107" types="lymph"/>
+    <roi x="1254" y="0" w="104" h="107" types="lymph"/>
+  </img>
+  <img name="9fa96adf7c5439c44b9fdf29a5946ee6" number="abc" coor="0,0" mn="0">
+    <roi x="1118" y="536" w="98" h="99" types="lymph"/>
+    <roi x="841" y="775" w="103" h="105" types="lymph"/>
+    <roi x="795" y="859" w="124" h="114" types="lymph"/>
+    <roi x="455" y="537" w="87" h="92" types="lymph"/>
+    <roi x="1067" y="458" w="110" h="122" types="lymph"/>
+    <roi x="1017" y="443" w="101" h="91" types="lymph"/>
+  </img>
+  <img name="161c1e802950d831a739bad8aed9ecde" number="abc" coor="0,0" mn="0">
+    <roi x="860" y="411" w="96" h="103" types="lymph"/>
+    <roi x="945" y="841" w="92" h="102" types="lymph"/>
+    <roi x="326" y="907" w="142" h="117" types="lymph"/>
+    <roi x="170" y="90" w="85" h="89" types="lymph"/>
+    <roi x="991" y="576" w="123" h="124" types="lymph"/>
+    <roi x="855" y="602" w="122" h="117" types="mc" mn="1"/>
+    <roi x="92" y="71" w="86" h="86" types="lymph"/>
+    <roi x="924" y="934" w="94" h="80" types="lymph"/>
+  </img>
+  <img name="3b55d95d69c75f3a4f12620a21e0d9fb" number="abc" coor="0,0" mn="0">
+    <roi x="360" y="277" w="94" h="95" types="lymph"/>
+    <roi x="593" y="895" w="81" h="73" types="lymph"/>
+    <roi x="37" y="95" w="82" h="82" types="lymph"/>
+    <roi x="0" y="22" w="52" h="100" types="lymph"/>
+  </img>
+  <img name="05e798c28335371407dd22e786618c24" number="abc" coor="0,0" mn="0">
+    <roi x="1187" y="746" w="91" h="87" types="lymph"/>
+    <roi x="44" y="510" w="80" h="101" types="lymph"/>
+    <roi x="679" y="415" w="88" h="88" types="lymph"/>
+  </img>
+  <img name="7e3457cb00aab5116d9ff5ca18f09ee3" number="abc" coor="0,0" mn="0">
+    <roi x="802" y="778" w="123" h="129" types="lymph"/>
+    <roi x="92" y="206" w="113" h="82" types="lymph"/>
+    <roi x="1093" y="817" w="132" h="134" types="lymph"/>
+    <roi x="1013" y="330" w="140" h="138" types="lymph"/>
+    <roi x="257" y="501" w="108" h="109" types="lymph"/>
+    <roi x="218" y="269" w="43" h="42" types="bc"/>
+  </img>
+  <img name="0629869a5b3093f50efcd7688c22e1c5" number="abc" coor="0,0" mn="0">
+    <roi x="650" y="894" w="143" h="130" types="lymph"/>
+    <roi x="796" y="0" w="135" h="123" types="lymph"/>
+    <roi x="249" y="882" w="102" h="84" types="lymph"/>
+    <roi x="396" y="913" w="101" h="91" types="lymph"/>
+  </img>
+  <img name="76ed175f972cc867b32800f0fa177cfe" number="abc" coor="0,0" mn="0">
+    <roi x="480" y="841" w="98" h="98" types="lymph"/>
+    <roi x="144" y="904" w="100" h="101" types="lymph"/>
+    <roi x="293" y="443" w="113" h="111" types="lymph"/>
+  </img>
+  <img name="50de514151e5da0b324e677816d47d72" number="abc" coor="0,0" mn="0">
+    <roi x="494" y="519" w="112" h="109" types="lymph"/>
+    <roi x="921" y="298" w="144" h="144" types="lymph"/>
+    <roi x="1124" y="580" w="110" h="107" types="lymph"/>
+    <roi x="530" y="33" w="74" h="84" types="lymph"/>
+  </img>
+  <img name="653fd67ea396432adc8474f5231684e8" number="abc" coor="0,0" mn="0">
+    <roi x="627" y="478" w="129" h="124" types="bc"/>
+    <roi x="214" y="799" w="116" h="116" types="lymph"/>
+    <roi x="0" y="0" w="115" h="74" types="lymph"/>
+    <roi x="0" y="835" w="74" h="112" types="lymph"/>
+    <roi x="72" y="895" w="103" h="102" types="lymph"/>
+    <roi x="906" y="0" w="108" h="59" types="lymph"/>
+  </img>
+</patient>

@@ -24,9 +24,10 @@ def get_last_exp():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='ultralytics-v11 train')
-    parser.add_argument('--imgsz', '-sz', default=1360, type=int)
-    parser.add_argument('--epochs', '-e', default=500, type=int)
-    parser.add_argument('--resume', '-c', default=0, type=int,help="10 e.g.")
+    parser.add_argument('--imgsz',  '-sz', default=1360, type=int)
+    parser.add_argument('--epochs', '-i', default=500, type=int)
+    parser.add_argument('--model',  '-m', default='yolo11.yaml',help="base model")
+    parser.add_argument('--resume', '-c', action='store_true')
     args = parser.parse_args()
 
     # 如何切换模型版本, 上面的ymal文件可以改为 yolov11s.yaml就是使用的v11s,
@@ -34,12 +35,7 @@ if __name__ == '__main__':
     #   那么如果想使用其它版本就把上面的名称改为yolov11l-XXX.yaml即可
     #   （改的是上面YOLO中间的名字不是配置文件的）！
 
-    if args.resume>0:
-        initpt = f"runs/train/{wname}{args.resume}/weights/last.pt"
-    else: # resumen train
-        initpt = "yolo11.yaml"
-
-    model = YOLO(initpt)
+    model = YOLO(args.model)
     
     # 是否加载预训练权重,科研不建议大家加载否则很难提升精度
     # model.load('yolov11n.pt') 
