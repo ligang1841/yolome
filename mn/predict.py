@@ -1,6 +1,7 @@
 from ultralytics import YOLO
 import cv2
 from glob import glob
+import argparse
 
 def predict(chosen_model, img, classes=[], conf=0.5):
     if classes:
@@ -25,13 +26,23 @@ def predict_and_detect(chosen_model, img, classes=[], conf=0.5, rectangle_thickn
 
 
 if __name__ == "__main__":
-    #model = YOLO("yolo11x.pt")
-    model = YOLO("runs/train/exp7/weights/last.pt")
+    parser = argparse.ArgumentParser(description='mn predict')
+    parser.add_argument('--model', '-m',default='weights/last.pt')
+    parser.add_argument('--image', '-img')
+    parser.add_argument('--display', '-d', action='store_true')
+    parser.add_argument('--save', '-s')
+    parser.add_argument('--score', '-sc',default=0.2, type=float)
+
+    args = parser.parse_args()
+
+    model = YOLO(args.model)
 
     # read the image
-    image = cv2.imread("test-mc2.png")
-    result_img, _ = predict_and_detect(model, image, classes=[], conf=0.5)
+    image = cv2.imread(args.image)
+    result_img, _ = predict_and_detect(model, image, classes=[], conf=args.score)
 
-    cv2.imwrite("/dev/shm/test.png", result_img)
-    #cv2.imshow("Image", result_img)
-    #cv2.waitKey(0)
+    if args.save is not None:
+        cv2.imwrite(args.save, result_img)
+    if args.display:
+        cv2.imshow("Image", result_img)
+        cv2.waitKey(0)
