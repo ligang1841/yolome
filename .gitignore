@@ -6,7 +6,7 @@ __pycache__
 **/val
 **/test
 
-nohup.out
+*.out
 *.png
 *.jpg
 *.tif
