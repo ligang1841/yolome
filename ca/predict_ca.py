@@ -9,13 +9,15 @@ from glob import glob
 import argparse
 from report_ca_xml import *
 import time
-from nms import remove_overlap_type as rm_bbox
 
 # ====== config =======
 keep_label = ["dic", "f1", "min", "f", "r", "nr", "f2"]
 colour=[(255,0,0),(0,0,220),(0,0,200),(0,0,220),(200,0,0),(0,0,200),(0,0,220)]
 EXT='png'
+
 limit=300  # limit imgages
+model_count = 'weights/last_count.pt'
+ch_range=[40,52]
 # =====================
 
 
@@ -26,6 +28,14 @@ def predict(chosen_model, img, classes=[], conf=0.5):
         results = chosen_model.predict(img, conf=conf)
 
     return results
+
+
+def predict_count(chosen_model, img, conf=0.5): 
+    results = predict(chosen_model, img, [], conf=conf)
+    count = 0
+    for result in results:
+        count += len(result.boxes)
+    return count
 
 
 def predict_and_detect(chosen_model, img, classes=[], conf=0.5): 
@@ -50,6 +60,8 @@ def predict_and_detect(chosen_model, img, classes=[], conf=0.5):
     return data1
 
 def predict_report(model,case_dir):
+    cmodel = YOLO(model_count)
+
     # report init
     roi_root = create_roi('new_one')
     report_root = create_report()
@@ -82,12 +94,18 @@ def predict_report(model,case_dir):
 
     for iname in imgs:
         img = cv2.imread(iname)
+
+        # test ch count
+        ch_num = predict_count(cmodel,img)
+        if ch_num<ch_range[0] or ch_num>ch_range[1]:
+            continue
+
         data1 = predict_and_detect(model, img)
         
         # one image
         roi_img_node = add_roi_imgname(roi_root, 
                             os.path.basename(iname),
-                            str(count_img),'0, 0',ch_num='-')
+                            str(count_img),'0, 0',ch_num=str(ch_num))
 
         # box in boxes
         for d in data1:
