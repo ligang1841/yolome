@@ -1,16 +1,5 @@
 from lxml import etree
 
-
-def read_xml(xml_file):
-    tree = etree.parse(xml_file)
-    root = tree.getroot()
-    return root
-
-    #tree = etree.ElementTree.parse(in_path)
-    #root = tree.getroot()
-    #return root
-
-
 # ---roi.xml---------------------------------------------------------------------------
 '''
 <patient name="p-name">
@@ -25,49 +14,28 @@ def read_xml(xml_file):
 </patient>
 '''
 
+def read_xml(xml_file,is_enc=False):
+    tree = etree.parse(xml_file)
+    root = tree.getroot()
+    return root
+
 
 def create_roi(pname):
     root = etree.Element('patient',name=pname)
     return root
 
-### number is image number, coor is x,y
-def add_roi_imgname(root,imgname,number='',coorx='0',coory='0',mn=0):
-    img_node = etree.SubElement(root,'img', name=imgname)
-    img_node.set('number',number)
-    img_node.set('coor',coorx + ',' + coory)
-    if mn>=0:
-        img_node.set('mn',str(mn))
+def add_roi_imgname(root,imgname,img_num,coor,ch_num):
+    img_node = etree.SubElement(root,'img', name=imgname,number=img_num,coor=coor,ch_num=ch_num)
     return img_node
 
-def add_roi_img_roi(img_xml,axis,tp,mn=0):
+def add_roi_img_roi(img_xml,axis,tp,coor='000 x 000'):
     roi = etree.SubElement(img_xml,'roi')
     roi.set('x', str(axis[0]))
     roi.set('y', str(axis[1]))
     roi.set('w', str(axis[2]-axis[0]))
     roi.set('h', str(axis[3]-axis[1]))
     roi.set('types',tp)
-    if mn>0:
-        roi.set('mn', str(mn))
-
-
-# ---rois.xml---------------------------------------------------------------------------
-
-#<case name="case_one">
-#  <img name="00122.jpg" type="lymph" score=”0.88” slide="0" loc=”126.9, 292.3” />
-
-def create_rois(case_name):
-    root = etree.Element('case',name=case_name)
-    return root
-
-def add_sm_img(root,iname,tp,score,slide,x,y):
-    img = etree.SubElement(root,'img')
-    img.set('name', iname)
-    img.set('type', tp)
-    img.set('score',str(round(score,2)))
-    img.set('slide',str(slide))
-    img.set('loc',  str(round(x,1)) + ',' + str(round(y,1)))
-    
-
+    #roi.set('axis',coor)
 
 # ---report.xml---------------------------------------------------------------------------
 '''
@@ -156,14 +124,33 @@ def add_report_mc_img(mc_node,imgname):
 
 def add_report_calc(root,calcinfo):
     calc_node = etree.SubElement(root, 'calc')
+    '''
+    etree.SubElement(calc_node, 'phase').text = calcinfo['phase'] #分裂相
+    etree.SubElement(calc_node, 'dic').text = calcinfo['dic']   #双着数
+    etree.SubElement(calc_node, 'trc').text = calcinfo['trc']
+    etree.SubElement(calc_node, 'quc').text = calcinfo['quc']
+    etree.SubElement(calc_node, 'pec').text = calcinfo['pec']
+    etree.SubElement(calc_node, 'f').text = calcinfo['f']       #断片数 f+f1
+    etree.SubElement(calc_node, 'min').text = calcinfo['min']
+    etree.SubElement(calc_node, 'r').text = calcinfo['r']
+    etree.SubElement(calc_node, 'nr').text = calcinfo['nr']
+    etree.SubElement(calc_node, 'abb_rate').text = calcinfo['abb_rate'] #畸变率，此项医生填写，0-1之间小数
+    etree.SubElement(calc_node, 'marked_rate').text = calcinfo['marked_rate'] #marked率，医生填写，0-1之间小数
+    '''
     etree.SubElement(calc_node, 'images').text = calcinfo['images']
-    etree.SubElement(calc_node, 'lymph').text  = calcinfo['lymph']
-    etree.SubElement(calc_node, 'mc_cell').text= calcinfo['mc_cell']
-    etree.SubElement(calc_node, 'mc').text     = calcinfo['mc']
-    etree.SubElement(calc_node, 'bc').text     = calcinfo['bc']
-    etree.SubElement(calc_node, 'mc_cell_rate').text = calcinfo['mc_cell_rate']
-    etree.SubElement(calc_node, 'mc_rate').text= calcinfo['mc_rate']
-    etree.SubElement(calc_node, 'bc_rate').text= calcinfo['bc_rate']
+    etree.SubElement(calc_node, 'marked').text = calcinfo['marked']
+    etree.SubElement(calc_node, 'dic').text = calcinfo['dic']   #双着数
+    etree.SubElement(calc_node, 'trc').text = calcinfo['trc']
+    etree.SubElement(calc_node, 'r').text = calcinfo['r']
+    etree.SubElement(calc_node, 'min').text = calcinfo['min']
+    etree.SubElement(calc_node, 'f').text = calcinfo['f']       #断片数 f+f1
+    etree.SubElement(calc_node, 'nr').text = calcinfo['nr']
+    etree.SubElement(calc_node, 't').text = calcinfo['t']
+    etree.SubElement(calc_node, 'abn').text = calcinfo['abn']
+    etree.SubElement(calc_node, 'rogue').text = calcinfo['rogue']
+    etree.SubElement(calc_node, 'abb_rate').text = calcinfo['abb_rate'] #畸变率，此项医生填写，0-1之间小数
+    etree.SubElement(calc_node, 'marked_rate').text = calcinfo['marked_rate'] #marked率，医生填写，0-1之间小数
+
 
 def add_report_diag(root):
     etree.SubElement(root, 'diag').text = ' '
@@ -180,64 +167,24 @@ def add_report_reportinfo(root,reportinfo):
 
 
 # ------------------------------------------------------------------------------
-def write_pretty_xml(xmlname,root):
-    parser = etree.XMLParser(remove_blank_text=True)
-    tree = etree.ElementTree(root, parser=parser)
-    tree.write(xmlname, xml_declaration=True,encoding='utf-8',pretty_print=True)
-    #tree.write(xmlname, encoding="utf-8", xml_declaration=True)
+def write_pretty_xml(xmlname,root,is_enc=False):
+    if is_enc:
+        txt=etree.tostring(root)
+        encxml = encc_txt(txt)
+        enc_xmlname = xmlname[:-3] + "enc"
+        with open(enc_xmlname,'wb') as f:
+            f.write(encxml)
+        
+    else:
+        parser = etree.XMLParser(remove_blank_text=True)
+        tree = etree.ElementTree(root, parser=parser)
+        tree.write(xmlname, xml_declaration=True,encoding='utf-8',pretty_print=True)
+
 
 if __name__ == '__main__':
-    '''
-    # roi.xml test
-    rootxml = create_roi('my-patient-name')
-    
-    # one image
-    imgnode = add_roi_imgname(rootxml,'0x1.jpg')
-    
-    # all boxes in one image
-    myaxis = [100,120,500,600]
-    add_roi_img_roi(imgnode,myaxis)
-    
-    myaxis = [101,121,501,601]
-    add_roi_img_roi(imgnode,myaxis)
 
-    write_pretty_xml('/dev/shm/rox.xml',rootxml)
-    '''
+    ### test enc
+    root=read_xml('/dev/shm/demo.xml')
+    #write_pretty_xml('/dev/shm/report.xml', root,True)
 
-    # report.xml
-    report_root = create_report()
-
-    baseinfo_node = {
-        'pname':'new-one',
-        'pid':'p0000',
-        'hid':'n12345',     # Hospital number
-        'dept':'体检中心',
-        'bar_code':'bar-code',
-        'test_item':'abberation',
-        'age':'1',
-        'sex':'1'
-    }
-    add_report_baseinfo(report_root,baseinfo_node)
-
-    add_report_aerial(report_root)
-
-    # mc and mc-images
-    mc_ele = add_report_mc(report_root)
-    add_report_mc_img(mc_ele,'123.jpg')
-    add_report_mc_img(mc_ele,'456.jpg')
-
-    # calc
-    #calcinfo_node = {
-    #    'mc_num':'100',
-    #    'lymph_num':'10',
-    #    'bc_num':'10',
-    #    'mc_rate':'0.01',
-    #    'bc_rate':'0.01'
-    #}
-    #add_report_calc(report_root,calcinfo_node)
-
-    add_report_diag(report_root)
-
-    #add_report_reportdate(report_root,'20200112')
-
-    write_pretty_xml('/dev/shm/report.xml', report_root)
+    pass
