@@ -6,13 +6,13 @@ import argparse
 from glob import glob
 
 wname = 'exp'
-model_dir = 'runs/train'
+model_dir = 'runs/train_count'
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='mn-v11 train')
-    parser.add_argument('--yaml',  '-y', default='mn_zss_gd', type=int)
-    parser.add_argument('--imgsz',  '-sz', default=1360, type=int)
-    parser.add_argument('--epochs', '-i', default=500, type=int)
+    parser = argparse.ArgumentParser(description='ca-v11 train')
+    parser.add_argument('--yaml',  '-y', default='ca_lc_count')
+    parser.add_argument('--imgsz',  '-sz', default=1280, type=int)
+    parser.add_argument('--epochs', '-i', default=200, type=int)
     parser.add_argument('--model',  '-m', default='yolo11.yaml',help="base model")
     parser.add_argument('--resume', '-c', action='store_true')
     args = parser.parse_args()

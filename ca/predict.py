@@ -17,8 +17,6 @@ def predict_and_detect(chosen_model, img, classes=[], conf=0.5,
                        rectangle_thickness=2, text_thickness=1):
     results = predict(chosen_model, img, classes, conf=conf)
     for result in results:
-        print(result)
-        exit()
         for box in result.boxes:
             cv2.rectangle(img, 
                     (int(box.xyxy[0][0]), int(box.xyxy[0][1])),
@@ -33,7 +31,7 @@ def predict_and_detect(chosen_model, img, classes=[], conf=0.5,
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='mn predict')
+    parser = argparse.ArgumentParser(description='ca predict')
     parser.add_argument('--model',  '-m', default='weights/last.pt')
     parser.add_argument('--val_dir','-v', default='val')
     parser.add_argument('--image',  '-i', default='')
@@ -48,8 +46,8 @@ if __name__ == "__main__":
 
     # read the val's images
     if os.path.isdir(args.val_dir):
-        print('test val')
-        os.makedirs(f"{args.save}/mctest",exist_ok=True)
+        print('test ca val',args.val_dir)
+        os.makedirs(f"{args.save}/catest",exist_ok=True)
         count = 0
         imgs = glob(args.val_dir + "/*.png")
         for img in imgs:
@@ -60,14 +58,14 @@ if __name__ == "__main__":
                             conf=args.score)
             
             bname = os.path.basename(img)
-            cv2.imwrite(f"{args.save}/mctest/{bname}", result_img)
+            cv2.imwrite(f"{args.save}/catest/{bname}", result_img)
             print('predicted',bname)
             
             if count>=args.limit: break
             count += 1
     # read one image
     elif os.path.isfile(args.image):
-        print(args.image)
+        print("img:",args.image)
         image = cv2.imread(args.image)
         result_img, _ = predict_and_detect(model,
                             image,

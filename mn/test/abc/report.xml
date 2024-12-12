@@ -17,7 +17,7 @@
   <aerial_view img="aerial.jpg"/>
   <calc>
     <images>66</images>
-    <lymph>329</lymph>
+    <lymph>302</lymph>
     <mc_cell>20</mc_cell>
     <mc>20</mc>
     <bc>17</bc>
@@ -28,7 +28,7 @@
   <report>
     <reportdate></reportdate>
     <receiver></receiver>
-    <receiver_time>2024-12-09 22:22</receiver_time>
+    <receiver_time>2024-12-10 23:04</receiver_time>
     <inspector></inspector>
     <reviewer></reviewer>
     <reviewer_time></reviewer_time>
