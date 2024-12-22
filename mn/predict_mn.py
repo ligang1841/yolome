@@ -1,3 +1,17 @@
+"""
+    predict mn
+    QC: NOT nessesary
+
+    Predict:
+        get lymph,mc,bc, until lymph > 1000 or images >=300
+
+    report:
+        mc: num, rate
+        lymph: num
+        微核率： micro core / lymphs+mc
+        微核细胞率：mc / lymphs+mc
+"""
+
 from ultralytics import YOLO
 import cv2
 import os
@@ -7,11 +21,17 @@ from report_mn_xml import *
 import time
 from nms import remove_overlap_type as rm_bbox
 
+# ====== config ===============================================
 keep_label = ['lymph','mc','bc']
 colour=[(0,255,0),(255,0,0),(0,0,255),(255,255,0)]
+# jpg or png, jpg is better, but zeiss always output png
 EXT='png'
+# images number. 70 cells/image as good, 10 cells as bad image
+# this limit will stop to analyze, even not get 1000 cells
 limit=300
+# =============================================================
 
+# real predict in one image
 def predict(chosen_model, img, classes=[], conf=0.5):
     if classes:
         results = chosen_model.predict(img, classes=classes, conf=conf)
@@ -20,7 +40,7 @@ def predict(chosen_model, img, classes=[], conf=0.5):
 
     return results
 
-
+# get cells(lymph,mc,bc) with type and rect box
 def predict_and_detect(chosen_model, img, classes=[], conf=0.5): 
     results = predict(chosen_model, img, classes, conf=conf)
     data1 = []
@@ -40,19 +60,10 @@ def predict_and_detect(chosen_model, img, classes=[], conf=0.5):
                           'mc':mc})
             this_mn += mc
 
-            '''
-            cv2.rectangle(img, 
-                    (int(box.xyxy[0][0]), int(box.xyxy[0][1])),
-                    (int(box.xyxy[0][2]), int(box.xyxy[0][3])),
-                    colour[id],
-                    rectangle_thickness)
-            cv2.putText(img, f"{result.names[int(box.cls[0])]}",
-                        (int(box.xyxy[0][0]), int(box.xyxy[0][1]) - 10),
-                        cv2.FONT_HERSHEY_PLAIN, 1,
-                        (255,0,0), text_thickness)
-            '''
     return data1,this_mn
 
+
+# main work flow and create report xml
 def predict_report(model,case_dir):
     # report init
     roi_root = create_roi('new_one')
@@ -144,6 +155,7 @@ def predict_report(model,case_dir):
     write_pretty_xml(case_dir + '/report.xml', report_root)
 
 
+# test this predict by command line for one case
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='mn predict')
     parser.add_argument('--model',  '-m', default='weights/last.pt')
@@ -160,9 +172,5 @@ if __name__ == "__main__":
     # read the image
     if os.path.isdir(args.case_dir):
         predict_report(model,args.case_dir)
-    elif os.path.isdir(args.val_dir):
-        predict_imgs(model,args.val_dir)
-    elif os.path.isfile(args.image):
-        predict_one_img(model,args.image)
     else:
         print('do nothing')

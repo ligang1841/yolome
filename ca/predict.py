@@ -1,9 +1,21 @@
+"""
+    测试工具
+    检测每次更新库后，测试图像并标记，直观检测效果
+    参数：
+        -m .pt （训练库）
+        -v 测试图片的目录，例如test_case，里面是png图片
+        -s 保存标记框后的图片目录，默认/dev/shm/catest目录里面
+"""
+
 from ultralytics import YOLO
 import cv2
 import os
 from glob import glob
 import argparse
 
+# test signle image with given image
+# conf is default 0.5
+#       will change to multi-classes with different score, if pt has bias in real test(mc=0.5,lymph=0.8,bc=0.8 e.g.)
 def predict(chosen_model, img, classes=[], conf=0.5):
     if classes:
         results = chosen_model.predict(img, classes=classes, conf=conf)
@@ -13,6 +25,8 @@ def predict(chosen_model, img, classes=[], conf=0.5):
     return results
 
 
+# test work flow
+# get rect will write to DB, or draw on images
 def predict_and_detect(chosen_model, img, classes=[], conf=0.5, 
                        rectangle_thickness=2, text_thickness=1):
     results = predict(chosen_model, img, classes, conf=conf)

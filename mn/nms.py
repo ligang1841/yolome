@@ -1,6 +1,7 @@
-import numpy as np
+# remove overlay boxes
+# all these model has the general problem, and must remove overlay boxes
 
-#from detectron2.engine.defaults import DefaultPredictor
+import numpy as np
 
 #get 2bbox IoU
 def bb_iou(x1, y1, w1, h1, x2, y2, w2, h2):
@@ -104,4 +105,3 @@ def remove_overlap_type(data1,iou=0.5):
     if len(rm_bbox)>0:
         data1 = np.delete(data1,rm_bbox,axis=0)
     return data1
-

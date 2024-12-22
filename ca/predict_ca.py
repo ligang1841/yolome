@@ -1,5 +1,19 @@
 """
     predict ca
+    QC: mark and unmark
+        1 keep only mark-image, 200 valid image
+        2 sort leveled image and with count ch numbers
+        2.1 1st queue:level 0,1,2
+        2.2 2nd queue: 3,4 level
+        2.3 give up others
+    Predict:
+        1 predict 1st queue
+        2 predict 2nd queue
+    report:
+        ab(dic,trc,r) = dic + 2xtrc +r
+        f,min,ar,(ace = f+min+ar)
+        染色体畸变率(Chromosome aberration rate)： ab / images
+
 """
 
 from ultralytics import YOLO
@@ -10,35 +24,64 @@ import argparse
 from report_ca_xml import *
 import time
 
-# ====== config =======
+# ====== config ===============================================================
+# defind rect colour for test
 keep_label = ["dic", "f1", "min", "f", "r", "nr", "f2"]
 colour=[(255,0,0),(0,0,220),(0,0,200),(0,0,220),(200,0,0),(0,0,200),(0,0,220)]
+#  png or jpg, the better is jpg
 EXT='png'
+level_good=['a','b','c']
+level_general=['e']
+level_bad=['f','g']
 
-limit=300  # limit imgages
+# limit images, valid >= 200
+limit=300
 model_count = 'weights/last_count.pt'
+model_mark = 'weights/last_level.ph'
+# 46-4 ~ 46+4 in general
 ch_range=[40,52]
-# =====================
+# =============================================================================
 
-
+# real predict for given-one-image
 def predict(chosen_model, img, classes=[], conf=0.5):
     if classes:
         results = chosen_model.predict(img, classes=classes, conf=conf)
     else:
         results = chosen_model.predict(img, conf=conf)
 
+    # will be yolo-result, include type,score
     return results
 
+# test mark-level is 0? 1? ...
+# None means ummarked
+def predict_level(chosen_model, img, conf=0.5):
+    results = predict(chosen_model, img, [], conf=conf)
+    boxes = 0
+    tp = None
+    for result in results:
+        for box in result.boxes:
+            boxes += len(result.boxes)
+            tp = result.names[int(box.cls[0])]
 
+    if boxes == 1:
+        return tp
+    else:
+        return None
+
+
+# count ch in one image
+# a good trained pt-lib, will be +1 or -1 in error
 def predict_count(chosen_model, img, conf=0.5): 
     results = predict(chosen_model, img, [], conf=conf)
     count = 0
+    tp = 0
     for result in results:
         count += len(result.boxes)
     return count
 
 
-def predict_and_detect(chosen_model, img, classes=[], conf=0.5): 
+# predict this not bad image
+def predict_and_detect(chosen_model, img, classes=[], conf=0.5):
     results = predict(chosen_model, img, classes, conf=conf)
     data1 = []
 
@@ -59,8 +102,17 @@ def predict_and_detect(chosen_model, img, classes=[], conf=0.5):
                         })
     return data1
 
+
+# predict work flow
+# all images in case/xy dir:
+# 1 QC: mark / level test
+# 2 count: count dc numbers
+# if QC and count is valid, then predict it
+# 3 predict if this is a good image
+# 4 create report
 def predict_report(model,case_dir):
     cmodel = YOLO(model_count)
+    mmodel = YOLO(model_mark)
 
     # report init
     roi_root = create_roi('new_one')
@@ -94,6 +146,15 @@ def predict_report(model,case_dir):
 
     for iname in imgs:
         img = cv2.imread(iname)
+
+        # test QC mark
+        # QC test
+        qc = predict_level(mmodel, img)
+        if qc is not None:
+            if qc in level_bad:
+                continue
+        else:
+            continue
 
         # test ch count
         ch_num = predict_count(cmodel,img)
@@ -155,6 +216,8 @@ def predict_report(model,case_dir):
     write_pretty_xml(case_dir + '/report.xml', report_root)
 
 
+
+# test this predict by command line for one case
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='mn predict')
     parser.add_argument('--model',  '-m', default='weights/last.pt')
