@@ -10,7 +10,7 @@ model_dir = 'runs/train'
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='pbc-nv11 train')
-    parser.add_argument('--yaml',  '-y', default='mn_zss_gd', type=int)
+    parser.add_argument('--yaml',  '-y', default='mot_wbc2')
     parser.add_argument('--imgsz',  '-sz', default=2560, type=int)
     parser.add_argument('--epochs', '-i', default=10000, type=int)
     parser.add_argument('--model',  '-m', default='yolo11.yaml',help="base model")
@@ -31,11 +31,11 @@ if __name__ == '__main__':
     model.train(data = yamlfile,
                 #task 为下面的某个 detect, segment, classify, pose
                 #task=
-                cache   = False,
+                cache   = True,
                 imgsz   = args.imgsz,
                 epochs  = args.epochs,
                 single_cls=False,  # 是否是单类别检测
-                batch   = 8,
+                batch   = 2,
                 close_mosaic=0,
                 workers = 0,
                 device  = '0',
