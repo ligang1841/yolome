@@ -23,6 +23,7 @@ from glob import glob
 import argparse
 from report_ca_xml import *
 import time
+import celltools
 
 # ====== config ===============================================================
 # defind rect colour for test
@@ -40,6 +41,8 @@ model_count = 'weights/last_count.pt'
 model_mark = 'weights/last_level.ph'
 # 46-4 ~ 46+4 in general
 ch_range=[40,52]
+std_axis=125.9,36.7,160,13.5
+
 # =============================================================================
 
 # real predict for given-one-image
@@ -162,11 +165,22 @@ def predict_report(model,case_dir):
             continue
 
         data1 = predict_and_detect(model, img)
+
+        # leica: Ann to axis(x,y)
+        # basename like:  "1.slide4-977-F29_0"
+        basename = os.path.basename(iname)[:-4] # remove ext name
+        try:
+            Ann = basename.split('-')[-1]
+            tmp = celltools.leica_Ann_to_axis(Ann,std_axis)
+            real_axis = f"{tmp[0]}, {tmp[1]}"
+            # like '125.3, 22.4'
+        except:
+            real_axis = '0, 0'
         
         # one image
         roi_img_node = add_roi_imgname(roi_root, 
                             os.path.basename(iname),
-                            str(count_img),'0, 0',ch_num=str(ch_num))
+                            str(count_img),real_axis,ch_num=str(ch_num))
 
         # box in boxes
         for d in data1:

@@ -20,6 +20,7 @@ import argparse
 from report_mn_xml import *
 import time
 from nms import remove_overlap_type as rm_bbox
+import celltools
 
 # ====== config ===============================================
 keep_label = ['lymph','mc','bc']
@@ -29,6 +30,7 @@ EXT='png'
 # images number. 70 cells/image as good, 10 cells as bad image
 # this limit will stop to analyze, even not get 1000 cells
 limit=300
+std_axis=125.9,36.7,160,13.5
 # =============================================================
 
 # real predict in one image
@@ -90,7 +92,6 @@ def predict_report(model,case_dir):
 
     # ---------- predict all images ----------
     imgs = glob(case_dir + f'/xy/*.{EXT}')
-    X=Y = '0'
     count_img = 0
     count_lym = 0
     count_mc = 0
@@ -103,6 +104,17 @@ def predict_report(model,case_dir):
 
         # remove overlap bbox
         data1 = rm_bbox(data1)
+
+        # leica: Ann to axis(x,y)
+        # basename like:  "1.slide4-977-F29_0"
+        basename = os.path.basename(iname)[:-4] # remove ext name
+        try:
+            Ann = basename.split('-')[-1]
+            tmp = celltools.leica_Ann_to_axis(Ann,std_axis)
+            X,Y = str(tmp[0]), str(tmp[1])
+            # like '125.3, 22.4'
+        except:
+            X,Y = '0', '0'
         
         # one image
         roi_img_node = add_roi_imgname(roi_root, 
